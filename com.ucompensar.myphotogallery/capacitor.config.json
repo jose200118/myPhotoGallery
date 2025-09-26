@@ -1,0 +1,10 @@
+{
+  "appId": "com.ucompensar.myphotogallery",
+  "appName": "myPhotoGallery",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

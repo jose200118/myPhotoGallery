@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">myPhotoGallery</string>
-    <string name="title_activity_main">myPhotoGallery</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="app_name">miTienda</string>
+    <string name="title_activity_main">miTienda</string>
+    <string name="package_name">com.ucompensar.galeriatienda</string>
+    <string name="custom_url_scheme">com.ucompensar.galeriatienda</string>
 </resources>

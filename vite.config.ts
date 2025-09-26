@@ -7,8 +7,19 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
+  // plugins: [
+  //   vue(),
+  //   legacy()
+  // ],
+   plugins: [
+    vue({
+      // template: {
+      //   compilerOptions: {
+      //     // ✅ Acepta todos los tags de Ionic como válidos
+      //     isCustomElement: (tag) => tag.startsWith('ion-')
+      //   }
+      // }
+    }),
     legacy()
   ],
   resolve: {

@@ -9,7 +9,6 @@ const routes: Array<RouteRecordRaw> = [
   { path: '/login', component: Login },
   { path: '/home', name: 'Home', component: HomePage },
   { path: '/camara', name: 'Camara', component: Camera }
-
 ];
 
 const router = createRouter({
@@ -17,17 +16,29 @@ const router = createRouter({
   routes
 });
 
-// Guard global para proteger rutas
 router.beforeEach((to, from, next) => {
   const publicPages = ['/login'];
   const authRequired = !publicPages.includes(to.path);
   const token = localStorage.getItem('token');
 
   if (authRequired && !token) {
-    // No hay token, redirigir al login
-    return next('/login');
+    if (to.path !== '/login') {
+      return next('/login');
+    }
   }
   next();
 });
+
+// router.beforeEach((to, from, next) => {
+//   const publicPages = ['/login'];
+//   const authRequired = !publicPages.includes(to.path);
+//   const token = localStorage.getItem('token');
+
+//   if (authRequired && !token) {
+//     // No hay token, redirigir al login
+//     return next('/login');
+//   }
+//   next();
+// });
 
 export default router;
